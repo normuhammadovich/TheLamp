@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LampVC" customModule="TheLamp" customModuleProvider="target">
+            <connections>
+                <outlet property="animeView" destination="xuO-qJ-xkf" id="Oda-yQ-ELS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuO-qJ-xkf" customClass="LottieAnimationView" customModule="Lottie">
+                    <rect key="frame" x="20" y="148" width="374" height="200"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="8I2-j6-KfL"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="500-lamp"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRq-QD-KkQ">
+                    <rect key="frame" x="107" y="398" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rRq-QD-KkQ" secondAttribute="height" id="N7a-4K-653"/>
+                        <constraint firstAttribute="height" constant="200" id="voy-g5-9ro"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemYellowColor"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="lamp.desk" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="140"/>
+                    </state>
+                    <connections>
+                        <action selector="lampTapped:" destination="-1" eventType="touchUpInside" id="qNK-c8-rKg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rRq-QD-KkQ" firstAttribute="top" secondItem="xuO-qJ-xkf" secondAttribute="bottom" constant="50" id="3Hy-5z-nKn"/>
+                <constraint firstItem="rRq-QD-KkQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="b21-fe-Z45"/>
+                <constraint firstItem="xuO-qJ-xkf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="gMa-XM-Zjn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xuO-qJ-xkf" secondAttribute="trailing" constant="20" id="y93-w7-KDt"/>
+                <constraint firstItem="xuO-qJ-xkf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zU8-2m-Grx"/>
+            </constraints>
+            <point key="canvasLocation" x="115.94202898550725" y="19.419642857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="lamp.desk" catalog="system" width="116" height="128"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
